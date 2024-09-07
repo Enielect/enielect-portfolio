@@ -60,7 +60,7 @@ const TopNav = () => {
         </div>
       </div>
 
-      <div className="fixed  text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10  flex justify-between items-center py-12 px-10">
+      <div className="fixed  text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 md:hidden  flex justify-between items-center py-12 px-10">
         <div onClick={() => setIsOpen((c) => !c)}>
           <Hamburger />
         </div>
