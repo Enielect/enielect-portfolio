@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -14,6 +14,7 @@
   }
 }
 
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -23,5 +24,88 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+} */
+
+* {
+  scrollbar-width: thin;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1f2833;
+  /* background-image: url('/public/bg-noisy.webp'); */
+}
+
+.bg-noisy {
+  pointer-events: none;
+  opacity: .9;
+  background-blend-mode: normal;
+  background-size: 25ww auto;
+  background-image: url(/bg-noisy.webp);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav:hover p {
+  transform: translateY(-100%);
+}
+
+.nav p {
+  transition: transform 0.3s;
+  transform: translatey(0);
+}
+
+.nav {
+  position: relative;
+}
+
+.nav ul li a:active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #66fcf1;
+  bottom: 0;
+}
+
+.bg-circle {
+  animation: circle 3s infinite ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  border: 0.125rem solid hsla(0, 0%, 100%, 0.2);
+  border-radius: 50%;
+}
+
+.first {
+
+}
+
+.second {
+  animation-delay: 400ms;
+}
+
+.third {
+  animation-delay: 600ms;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
   }
 }
