@@ -60,7 +60,7 @@ const TopNav = () => {
         </div>
       </div>
 
-      <div className="fixed  text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 md:hidden  flex justify-between items-center py-12 px-10">
+      <div className="fixed text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 md:hidden  flex justify-between items-center py-12 px-10">
         <div onClick={() => setIsOpen((c) => !c)}>
           <Hamburger />
         </div>
@@ -75,7 +75,7 @@ const TopNav = () => {
         </div>
       </div>
       <nav
-        className={`absolute overflow-hidden transition-all left-0 backdrop-blur-lg right-0 bottom-0 top-[83px] ${
+        className={`absolute overflow-hidden md:hidden transition-all left-0 backdrop-blur-lg right-0 bottom-0 top-[83px] ${
           isOpen ? "left-0" : "left-[700px]"
         }`}
       >
