@@ -3,10 +3,12 @@
 import { Hamburger } from "@/assets/icons";
 import { Eniola } from "@/public/eniola";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const TopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   return (
     <>
       <div className="fixed  text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 hidden md:flex justify-between items-center py-12 pr-10">
@@ -61,10 +63,13 @@ const TopNav = () => {
       </div>
 
       <div className="fixed text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 md:hidden  flex justify-between items-center py-12 px-10">
-        <div onClick={() => setIsOpen((c) => !c)}>
+        <button onClick={() => setIsOpen((c) => !c)}>
           <Hamburger />
-        </div>
-        <div className="w-[40px] h-[40px] p-[1] rounded-full overflow-hidden border-[#58c4dc] border">
+        </button>
+        <button
+          onClick={() => router.push("/#contact")}
+          className="w-[40px] h-[40px] p-[1] rounded-full overflow-hidden border-[#58c4dc] border"
+        >
           <Image
             src="/react.jpeg"
             className="w-full h-full object-cover"
@@ -72,20 +77,38 @@ const TopNav = () => {
             height={100}
             alt="react logo"
           />
-        </div>
+        </button>
       </div>
+      {/* <div className="fixed inset-0 z-40"> */}
       <nav
-        className={`absolute overflow-hidden md:hidden transition-all left-0 backdrop-blur-lg right-0 bottom-0 top-[83px] ${
+        className={`fixed z-40 h-[calc(100dvh-6rem)] overflow-hidden md:hidden transition-all left-0 backdrop-blur-lg right-0 bottom-0 top-[6rem] ${
           isOpen ? "left-0" : "left-[700px]"
         }`}
       >
         <ul className="flex flex-col justify-between text-white py-[30vh] p h-full text-2xl text-center">
-          <li>Projects</li>
-          <li>Resume</li>
-          <li>Contact</li>
-          <li>Experience</li>
+          <li onClick={() => setIsOpen((c) => !c)}>
+            <a href="/#projects" className="hover:underline">
+              Projects
+            </a>
+          </li>
+          <li onClick={() => setIsOpen((c) => !c)}>
+            <a href="/#resume" className="hover:underline">
+              Resume
+            </a>
+          </li>
+          <li onClick={() => setIsOpen((c) => !c)}>
+            <a href="/#contact" className="hover:underline">
+              Contact
+            </a>
+          </li>
+          <li onClick={() => setIsOpen((c) => !c)}>
+            <a href="/#experience" className="hover:underline">
+              Experience
+            </a>
+          </li>
         </ul>
       </nav>
+      {/* </div> */}
     </>
   );
 };
