@@ -9,7 +9,7 @@ const Home = () => {
       {/* This is the beginning of my portfolio */}
       <HeroSection />
       <div id="projects">
-        <div className="h-[150px]"></div>
+        <div className="md:h-[150px]"></div>
         <div>
           <h3 className="text-5xl text-white text-center font-bold">
             Projects
@@ -21,7 +21,7 @@ const Home = () => {
       <div id="contact">
         <div className="h-[110px]"></div>
         <div>
-          <h3 className="text-5xl text-white text-center font-bold">Contact</h3>
+          <h3 className="sm:text-5xl text-3xl text-white text-center font-bold">Contact</h3>
           <Contact />
         </div>
       </div>

@@ -16,8 +16,8 @@ export const Eniola = () => {
           y1="0.8885729807284856"
           y2="0.11142701927151444"
         >
-          <stop offset="0" stop-color="#5e43ff"></stop>
-          <stop offset="1" stop-color="#90ffff"></stop>
+          <stop offset="0" stopColor="#5e43ff"></stop>
+          <stop offset="1" stopColor="#90ffff"></stop>
         </linearGradient>
         <filter
           id="editing-glowing"
