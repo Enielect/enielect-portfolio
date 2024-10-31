@@ -11,7 +11,7 @@ const TopNav = () => {
   const router = useRouter();
   return (
     <>
-      <div className="fixed  text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 hidden md:flex justify-between items-center py-12 pr-10">
+      <div className="fixed  text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 hidden sm:flex justify-between items-center py-12 pr-10">
         <em>
           <Eniola />
         </em>
@@ -62,7 +62,7 @@ const TopNav = () => {
         </div>
       </div>
 
-      <div className="fixed text-white backdrop-blur-md left-0 right-0 top-0 h-12 z-10 md:hidden  flex justify-between items-center py-12 px-10">
+      <div className="fixed text-white backdrop-blur-md left-0 right-0 top-0 h-8 z-10 sm:hidden  flex justify-between items-center py-10 px-10">
         <button onClick={() => setIsOpen((c) => !c)}>
           <Hamburger />
         </button>
@@ -81,8 +81,8 @@ const TopNav = () => {
       </div>
       {/* <div className="fixed inset-0 z-40"> */}
       <nav
-        className={`fixed z-40 h-[calc(100dvh-6rem)] overflow-hidden md:hidden transition-all left-0 backdrop-blur-lg right-0 bottom-0 top-[6rem] ${
-          isOpen ? "left-0" : "left-[700px]"
+        className={`fixed z-40 h-[calc(100dvh-5rem)] overflow-hidden md:hidden transition-all left-0 backdrop-blur-lg right-0 bottom-0 top-[5.03rem] ${
+          isOpen ? "left-0" : "left-[1800px]"
         }`}
       >
         <ul className="flex flex-col justify-between text-white py-[30vh] p h-full text-2xl text-center">

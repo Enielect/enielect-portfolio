@@ -42,7 +42,7 @@ body {
 
 .bg-noisy {
   pointer-events: none;
-  opacity: .9;
+  opacity: 0.9;
   background-blend-mode: normal;
   background-size: 25ww auto;
   background-image: url(/bg-noisy.webp);
@@ -88,16 +88,17 @@ body {
   border-radius: 50%;
 }
 
-.first {
-
-}
-
 .second {
   animation-delay: 400ms;
 }
 
 .third {
   animation-delay: 600ms;
+}
+
+.animate-send:hover {
+  animation: top-down-text 0.5s ease-in-out both;
+  opacity: 20%;
 }
 
 @keyframes circle {
@@ -107,5 +108,17 @@ body {
   100% {
     transform: scale(2.8);
     opacity: 0;
+  }
+}
+
+@keyframes top-down-text {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

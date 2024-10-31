@@ -67,9 +67,11 @@ function SendButton() {
     <button
       disabled={pending}
       type="submit"
-      className=" px-4 py-2 rounded-md bg-blue-800 text-white"
+      className="px-4 py-2  rounded-md bg-blue-800 text-white"
     >
-      {pending ? "sending..." : "send"}
+      <span className="amimate-send inline-block w-full">
+        {pending ? "sending..." : "send"}
+      </span>
     </button>
   );
 }
