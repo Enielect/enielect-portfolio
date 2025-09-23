@@ -33,7 +33,7 @@ const projects = [
     title: "4eva Braids",
     description:
       "a web application for a fictional hair braiding business, showcasing services, portfolio, and booking options.",
-    image: "/4evabraid_bg.png",
+    image: "/projectImages/4evabraid_bg.png",
     tags: ["Next.js", "Tailwind CSS", "FastAPI"],
     liveUrl: "https://www.4evabraids.live/",
     githubUrl: "https://github.com/Enielect/4Eva-Braids",
@@ -51,7 +51,7 @@ const projects = [
     title: "Url Shortener",
     description:
       "A simple and efficient URL shortening service that allows users to create and manage short links.",
-    image: "/projectImages/url-shortener.png",
+    image: "/projectImages/url_shortner_bg.png",
     tags: ["React", "date-fns", "Framer Motion"],
     liveUrl: "https://url-shortener-phi-lake.vercel.app/",
     githubUrl: "https://github.com/Enielect/url-shortner",
@@ -77,7 +77,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all !pt-0 bg-gray-100 duration-300 border-0 shadow-lg backdrop-blur-sm"
+              className="group hover:shadow-xl transition-all !pt-0 bg-[rgba(255,255,255,0.1)] duration-300 border-0 shadow-lg backdrop-blur-sm"
             >
               <div className="relative overflow-hidden rounded-t-lg">
                 <Image
@@ -91,7 +91,7 @@ export function ProjectsSection() {
               </div>
 
               <CardHeader>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center text-white justify-between">
                   <CardTitle className="text-xl font-semibold">
                     {project.title}
                   </CardTitle>
@@ -104,7 +104,7 @@ export function ProjectsSection() {
                     </Button>
                   </div>
                 </div>
-                <CardDescription className="text-muted-foreground leading-relaxed">
+                <CardDescription className="text-white leading-relaxed">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -115,7 +115,7 @@ export function ProjectsSection() {
                     <Badge
                       key={tagIndex}
                       variant="secondary"
-                      className="bg-primary/10 text-primary hover:bg-primary/20"
+                      className="bg-white/10 text-white hover:bg-white/20"
                     >
                       {tag}
                     </Badge>

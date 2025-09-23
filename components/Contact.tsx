@@ -36,7 +36,7 @@ const Contact = () => {
       </form>
       {/* socials */}
       <div className="flex justify-center pb-5 items-center gap-4">
-        <a href="https://twitter.com/enielect">
+        <a href="https://twitter.com/eniola_aba">
           <Twitter />
         </a>
         <a href="https://linkedin.com/in/eniola-abayomi-045605232">
@@ -51,7 +51,7 @@ const Contact = () => {
       </div>
       {/* attributes */}
       <div className="py-3 text-white border-t text-center border-[rgba(255,255,255,0.1)]">
-        &copy; 2021 created by <span>Eni Dev</span>
+        &copy; {new Date().getFullYear()} created by <span>Eniola</span>
       </div>
     </footer>
   );
